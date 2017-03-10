@@ -2,9 +2,9 @@ require Rails.root.join("config/smtp")
 Rails.application.configure do
   if ENV.fetch("HEROKU_APP_NAME", "").include?("staging-pr-")
     ENV["APPLICATION_HOST"] = ENV["HEROKU_APP_NAME"] + ".herokuapp.com"
+    config.middleware.use Letsencrypt::Middleware
+    #config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
   end
-  config.middleware.use Letsencrypt::Middleware
-  config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
   config.middleware.use Rack::CanonicalHost, ENV.fetch("APPLICATION_HOST")
   config.cache_classes = true
   config.eager_load = true
