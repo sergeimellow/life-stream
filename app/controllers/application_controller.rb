@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :force_https
+  #before_filter :force_https
 
   # redirects any http requests to https
   def force_https

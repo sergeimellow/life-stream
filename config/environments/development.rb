@@ -1,4 +1,6 @@
 Rails.application.configure do
+  config.middleware.use Letsencrypt::Middleware
+  config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
   config.cache_classes = false
   config.eager_load = false
   config.consider_all_requests_local = true
