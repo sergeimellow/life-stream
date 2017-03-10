@@ -1,10 +1,9 @@
 # misc function for upkeep
 class Utility
-  # renew SSL
+  # renew SSL every month on the first
   def self.heroku_new_ssl
     if Time.now.day != 1
       `rake letsencrypt:renew`
     end
-    puts "yolo 123"
   end
 end
