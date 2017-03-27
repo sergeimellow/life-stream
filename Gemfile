@@ -53,6 +53,7 @@ group :test do
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
+  gem "rails-controller-testing"
 end
 
 group :staging, :production do
@@ -69,3 +70,4 @@ gem 'refills', group: [:development, :test]
 gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
 
 gem 'letsencrypt-rails-heroku', group: 'production'
+gem 'railroady', '~> 1.4', '>= 1.4.2'
