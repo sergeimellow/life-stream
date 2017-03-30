@@ -62,7 +62,7 @@ end
 
 gem 'high_voltage'
 gem 'bourbon', '~> 5.0.0.beta.7'
-gem 'neat', '~> 2.0.0.beta.1'
+gem 'neat', '~> 1.6'
 gem 'refills', group: [:development, :test]
 
 # Until the new API calls are generally available, you must manually specify my fork
