@@ -20,7 +20,8 @@ gem "sprockets", ">= 3.0.0"
 gem "suspenders"
 gem "title"
 gem "uglifier"
-gem "devise" 
+gem "devise"
+gem 'sendgrid-ruby'
 
 group :development do
   gem "listen"
@@ -53,6 +54,7 @@ group :test do
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
+  gem "rails-controller-testing"
 end
 
 group :staging, :production do
@@ -61,7 +63,7 @@ end
 
 gem 'high_voltage'
 gem 'bourbon', '~> 5.0.0.beta.7'
-gem 'neat', '~> 2.0.0.beta.1'
+gem 'neat', '~> 1.6'
 gem 'refills', group: [:development, :test]
 
 # Until the new API calls are generally available, you must manually specify my fork
@@ -69,3 +71,4 @@ gem 'refills', group: [:development, :test]
 gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
 
 gem 'letsencrypt-rails-heroku', group: 'production'
+gem 'railroady', '~> 1.4', '>= 1.4.2'
