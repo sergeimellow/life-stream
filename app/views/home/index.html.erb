@@ -12,7 +12,7 @@
           <li class="nav-link"><%= link_to "Log In", new_user_session_path %></li>
         <% else %>
           <!-- <li class="nav-link"><%= link_to "Edit Profile", edit_profile_path(current_user) %></li> -->
-          <li class="nav-link"><%= link_to("Logout (#{current_user.email})", destroy_user_session_path, :method => :delete) %></li>
+          <li class="nav-link"><%= link_to("Logout (#{current_user.email})", destroy_user_session_path, :method => :delete, :id => "logout") %></li>
         <% end %>
 <!--         <li id="js-navigation-more" class="nav-link more"><a href="javascript:void(0)">More</a>
           <ul class="submenu">
