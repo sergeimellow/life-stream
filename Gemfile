@@ -39,7 +39,7 @@ group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.5"
-  gem 'guard'
+  gem "guard-rspec", require: false
 end
 
 group :development, :staging do
